@@ -19,6 +19,7 @@ user: airflow pass: airflow
 ## Running Airflow
 docker compose up -d
 
+go2: http://localhost:8080
 
 
 
