@@ -21,5 +21,10 @@ docker compose up -d
 
 go2: http://localhost:8080
 
+## Additional notes on scripts
+[dag_with_postgress_operator.py](dags%2Fdag_with_postgress_operator.py)
+- after adding ports: -5432:5432 and hostname: postgres (or use host.docker.internal instead), in docker-compose.yaml, rebuild postgress service:  docker compose up -d --no-deps --build postgres
+- create connection to postgres db
+
 
 
