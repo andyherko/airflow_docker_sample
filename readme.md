@@ -22,9 +22,14 @@ docker compose up -d
 go2: http://localhost:8080
 
 ## Additional notes on scripts
-[dag_with_postgress_operator.py](dags%2Fdag_with_postgress_operator.py)
+[dag_with_postgres_operator.py](dags%2Fdag_with_postgres_operator.py)
 - after adding ports: -5432:5432 and hostname: postgres (or use host.docker.internal instead), in docker-compose.yaml, rebuild postgress service:  docker compose up -d --no-deps --build postgres
 - create connection to postgres db
+
+[dag_with_py_dependencies_docker.py](dags%2Fdag_with_py_dependencies_docker.py)
+- after building a custom image:  docker build . --tag hea_airflow-with-docker:latest
+- rebuild webserver and scheduler containers:  docker compose up -d --no-deps --build airflow-webserver airflow-scheduler
+
 
 
 
