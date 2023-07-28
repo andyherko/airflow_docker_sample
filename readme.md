@@ -29,6 +29,7 @@ go2: http://localhost:8080
 [dag_with_py_dependencies_docker.py](dags%2Fdag_with_py_dependencies_docker.py)
 - after building a custom image:  docker build . --tag hea_airflow-with-docker:latest
 - rebuild webserver and scheduler containers:  docker compose up -d --no-deps --build airflow-webserver airflow-scheduler
+- to extend airflow project, clone repo https://github.com/apache/airflow.git and build custom docker image: docker build . --build-arg AIRFLOW_VERSION='2.6.3' --tag customizing_airflow:2.6.3
 
 
 
